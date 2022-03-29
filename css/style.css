@@ -4,10 +4,6 @@
     text-decoration: none;
 }
 
-/* .clear {
-    clear: both;
-} */
-
 header, main, footer, nav, aside, section, article  {
     display: block;
 }
@@ -17,33 +13,30 @@ header, main, footer, nav {
 }
 
 header {
-    padding-top: 28px;
+    display: flex;
 }
 
-/* .header-flex-container {
-    height: 329px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-} */
+#logo {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 94px;
+    height: 49px;
+    margin-top: 28px;
+    margin-left: 24px;
+    display: block;
+}
 
 #layout1-header {
     height: 329px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+#layout2-header {
+    height: 192px;
 
-
-nav {
-    /* height: 58px;     */
-}
-
-#top-nav {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: flex-end; */
+    background: #212121;
 }
 
 .nav-horizontal-container {
@@ -52,7 +45,6 @@ nav {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-
     width: 100%;
     height: 58px;
 }
@@ -72,7 +64,7 @@ nav {
 }
 
 .nav-item:hover {
-    color: white;
+    color: #FFFFFF;
 }
 
 .nav-horizontal-container > #selected {
@@ -83,24 +75,12 @@ nav {
     background: #B94A48;
 }
 
-/* .nav-horizontal-container > #selected > a {
-    color: white;
-} */
+#selected-nav-item {
+    color: #FFFFFF;
+}
 
 #side-nav {
     width: 243px;
-}
-
-.nav-vertical-container {
-    width: 243px;
-    height: 1687px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-
-    background: #FFCDD2;
 }
 
 .nav-vertical-container > li {
@@ -116,7 +96,6 @@ nav {
 
 .nav-vertical-container > li > a{
     color: black;
-    
 }
 
 .nav-vertical-container > #selected {
@@ -125,10 +104,6 @@ nav {
 
 #main-wrapper {
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: nowrap; */
-    /* align-items: top; */
-    /* justify-content: flex-start; */
     width: 100%;
     background: #212121;
 }
@@ -144,32 +119,30 @@ nav {
     height: 491px;
 }
 
-.layout2-content-container {
-    display: flex;
-    height: 1687px;
-}
-
 .layout1-content-container > section {
     display: flex;
 }
 
 .layout1-content-container > #small-block {
+    margin-right: 151px;
+}
+
+.layout1-content-container > #big-block {
+    margin-right: 25px;
+}
+
+.layout2-content-container {
+    display: flex;
+}
+
+#small-block {
     width: 93px;
     height: 33px;
 }
 
-.layout1-content-container > #big-block {
-    margin-top: 7px;
-    margin-left: 151px;
+#big-block {
     width: 335px;
     height: 389px;
-}
-
-.layout1-content-container > #medium-block {
-    margin-top: 7px;
-    margin-left: 25px;
-    width: 338px;
-    height: 338px;
 }
 
 #medium-block {
@@ -194,8 +167,8 @@ nav {
     margin-top: 120px;
 }
 
-.low-blocks #medium-block:first-child {
-    margin-bottom: 48px;
+.low-blocks #medium-block:nth-child(even) {
+    margin-top: 48px;
 }
 
 .top-blocks > #medium-block {
@@ -206,40 +179,26 @@ nav {
     margin-left: 30px;
 }
 
-#logo {
-    background-image: url("../images/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 94px;
-    height: 49.5px;
-    margin-left: 24.5px;
-    
-    display: block;
-}
-
-#layout2-header {
-    width: 100%;
-    height: 192px;
-
-    background: #212121;
-}
-
-footer {
-    /* width: 100%; */
-    height: 121px;
-
-    background: #D6D6D6;
-}
-
-.aside-wrapper {
+.side-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: 41px;
-    width: 298px;
     height: 1687px;
 
     background: #FFCDD2;
+}
+
+.nav-vertical-container {
+    width: 243px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#aside-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 298px;
+    height: 1687px;
 }
 
 .aside-block {
@@ -247,13 +206,10 @@ footer {
     background: #C0D0E5;
 }
 
-.aside-block:first-child {
-
-}
-
 #tall-aside-block {
     align-self: flex-end;
     margin-top: 66px;
+    margin-right: 41px;
     height: 338px;
 }
 
@@ -261,4 +217,10 @@ footer {
     align-self: center;
     height: 125px;
     margin-bottom: 34px;
+}
+
+footer {
+    height: 121px;
+
+    background: #D6D6D6;
 }
