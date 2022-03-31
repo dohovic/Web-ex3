@@ -8,9 +8,8 @@ header, main, footer, nav, aside, section, article  {
     display: block;
 }
 
-header, main, footer, nav {
+header, nav, footer {
     width: 100%;
-    margin: 0 auto;
 }
 
 header {
@@ -21,11 +20,11 @@ header {
     background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
+    display: block;
     width: 94px;
     height: 49px;
     margin-top: 28px;
     margin-left: 24px;
-    display: block;
 }
 
 #layout1-header {
@@ -36,8 +35,6 @@ header {
 
 #layout2-header {
     height: 192px;
-    width: 1400px;
-
     background: #212121;
 }
 
@@ -47,7 +44,6 @@ header {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-    /* width: 1000px; */
     height: 58px;
 }
 
@@ -56,22 +52,14 @@ header {
     display: flex;
     height: 58px;
     align-items: center;
-
     background: #FFCDD2;
 }
-
-/* .nav-horizontal-container > li > a {
-    padding-top: 29px;
-    padding-left: 88px;
-} */
 
 .nav-item {
     display: flex;
     width: 243px;
-    height: 58px;
     justify-content: center;
     align-items: center;
-    
     color: black;
 }
 
@@ -81,8 +69,11 @@ header {
 
 .nav-horizontal-container > #selected {
     display: flex;
-
     background: #B94A48;
+}
+
+.nav-horizontal-container > li > a {
+    height: 58px;
 }
 
 #side-nav {
@@ -93,25 +84,30 @@ header {
     display: flex;
     height: 135px;
     align-items: center;
-
     background: #FFCDD2;
 }
 
 .nav-vertical-container > li > a {
+    height: 135px;
     padding-left: 7px;
-    
-    color: black;
 }
 
 .nav-vertical-container > #selected {
     background: #B94A48;
 }
 
-#main-wrapper {
+.main-wrapper {
     display: flex;
-    width: 1000px;
     margin: 0 auto;
     background: #212121;
+}
+
+#main-wrapper-layout1 {
+    width: 1000px;
+}
+
+#main-wrapper-layout2 {
+    width: 1400px;
 }
 
 .layout1-content-container {
@@ -138,6 +134,8 @@ header {
 
 .layout2-content-container {
     display: flex;
+    width: 818px;
+    height: 1687px;
 }
 
 #small-block {
@@ -186,7 +184,6 @@ header {
 
 .side-content {
     display: flex;
-
     background: #FFCDD2;
 }
 
@@ -202,7 +199,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 1687px;
-    width: 298px;
+    width: 339px;
     height: 1687px;
 }
 
@@ -226,6 +223,5 @@ header {
 
 footer {
     height: 121px;
-
     background: #D6D6D6;
 }
