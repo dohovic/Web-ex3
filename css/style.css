@@ -16,6 +16,15 @@ header {
     display: flex;
 }
 
+.center-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 1121px; */
+    background: #212121;
+}
+
 #logo {
     background-image: url("../images/logo.png");
     background-repeat: no-repeat;
@@ -28,23 +37,123 @@ header {
 }
 
 #layout1-header {
+    flex-direction: column;
+    align-items: center;
+}
+
+#header1-wrapper {
+    display: flex;
+    width: 1000px;
     height: 388px;
     flex-direction: column;
     justify-content: space-between;
 }
 
+#header2-wrapper {
+    display: flex;
+    width: 1400px;
+    height: 192px;
+    margin: 0 auto;
+}
+
 #layout2-header {
+    align-items: center;
     height: 192px;
     background: #212121;
 }
 
+#layout3-header {
+    flex-direction: row;
+    background: #212121;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#left-header {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#right-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    /* background: #517A8D; */
+}
+
+#right-header > section {
+    width: 250px;
+    height: 250px;
+    background: #FFFFFF;
+}
+
+#right-header > :nth-child(1) {
+    opacity: 0.2;
+}
+
+#right-header > :nth-child(2) {
+    opacity: 0.5;
+}
+
+#right-header > :nth-child(3) {
+    opacity: 0.7;
+}
+
+#layout3-header > div > a {
+    margin-left: 38px;
+    margin-top: 34px;
+}
+
+.plus-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 207px;
+    width: 86px;
+    height: 86px;;
+    cursor: pointer;
+}
+
+.plus-button > :first-child {
+    width: 12px;
+    height: 86px;
+    margin-left: 37px;
+    position: absolute;
+    background:#FFFFFF;
+}
+
+.plus-button > :nth-child(2) {
+    width: 86px;
+    height: 12px;
+    position: absolute;
+    background:#FFFFFF;
+}
+
 .nav-horizontal-container {
     display: flex;
+    height: 58px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-end;
-    height: 58px;
+}
+
+#half-nav {
+    width: 500px;
+    height: 62px;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#half-nav > li {
+    width: 167px;
+    height: 62px;
 }
 
 
@@ -138,6 +247,13 @@ header {
     height: 1687px;
 }
 
+.layout3-content-container {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    background: #517A8D;
+}
+
 #small-block {
     width: 93px;
     height: 33px;
@@ -225,3 +341,4 @@ footer {
     height: 121px;
     background: #D6D6D6;
 }
+
