@@ -21,7 +21,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 1121px; */
     background: #212121;
 }
 
@@ -64,10 +63,10 @@ header {
 
 #layout3-header {
     flex-direction: row;
-    background: #212121;
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
+    background: #212121;
 }
 
 #left-header {
@@ -84,13 +83,22 @@ header {
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
-    /* background: #517A8D; */
 }
 
 #right-header > section {
     width: 250px;
     height: 250px;
     background: #FFFFFF;
+}
+
+#right-header > #selected-rect {
+    background: green;
+    opacity: 1;
+}
+
+#right-header > #animation-rect {
+    background: blue;
+    opacity: 1;
 }
 
 #right-header > :nth-child(1) {
@@ -105,22 +113,27 @@ header {
     opacity: 0.7;
 }
 
-#layout3-header > div > a {
+#right-header > *:hover {
+    opacity: 1;
+    background: pink;
+}
+
+#layout3-header > #left-header > #logo {
     margin-left: 38px;
     margin-top: 34px;
 }
 
-.plus-button {
+#plus-button {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 207px;
+    margin: 0 auto;
     width: 86px;
     height: 86px;;
     cursor: pointer;
 }
 
-.plus-button > :first-child {
+#plus-button > :first-child {
     width: 12px;
     height: 86px;
     margin-left: 37px;
@@ -128,7 +141,7 @@ header {
     background:#FFFFFF;
 }
 
-.plus-button > :nth-child(2) {
+#plus-button > :nth-child(2) {
     width: 86px;
     height: 12px;
     position: absolute;
@@ -247,11 +260,13 @@ header {
     height: 1687px;
 }
 
-.layout3-content-container {
+#layout3-content-container {
     display: flex;
     width: 1000px;
-    height: 500px;
-    background: #517A8D;
+    /* height: 500px; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* background: #517A8D; */
 }
 
 #small-block {
@@ -342,3 +357,32 @@ footer {
     background: #D6D6D6;
 }
 
+@media (max-width: 999px) {
+    #layout3-header {
+        flex-direction: row;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: #212121;
+    }
+
+    #layout3-header > #right-header {
+        display:none;
+    }
+    
+    #left-header {
+        align-items: center;
+    }
+
+    #layout3-content-container {
+        display: flex;
+        width: 500px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    #layout3-header > #left-header > #logo {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
