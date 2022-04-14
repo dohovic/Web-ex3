@@ -1,18 +1,19 @@
 let container;
 let animationCount = 0;
 let animationRect;
+let animationImg;
+
 function initRects() {
     for (let i = 0; i < 26; i++) {
         let rectCluster = document.createElement("div");
-        rectCluster.setAttribute("id", "right-header");
+        rectCluster.classList.toggle("rect-cluster");
         for (let j = 0; j < 4; j++) {
             let rect = document.createElement("section");
             rectCluster.appendChild(rect);
             rect.addEventListener("click", (event) => { 
-                console.log("Boop");
                 if (event.target.id === "selected-rect")
                     event.target.setAttribute("id", "");
-                else event.target.setAttribute("id", "selected-rect"); 
+                else event.target.setAttribute("id", "selected-rect");
             });
         }
         container.appendChild(rectCluster);
@@ -22,46 +23,57 @@ function initRects() {
 function animate() {
     switch (animationCount) {
         case 0:
+            animationImg = document.createElement("img");
             animationRect.setAttribute("id", "animation-rect");
+            animationRect.appendChild(animationImg);
+            animationImg.src = "../images/mario/frame1.png";
             animationCount++;
             break;
         case 1:
-            animationRect.style.opacity = 0.9;
+            animationImg.src = "../images/mario/frame2.png";
             animationCount++;
             break;
         case 2:
-            animationRect.style.opacity = 0.8;
+            animationImg.src = "../images/mario/frame3.png";
             animationCount++;
             break;
         case 3:
-            animationRect.style.opacity = 0.7;
+            animationImg.src = "../images/mario/frame4.png";
             animationCount++;
             break;
         case 4:
-            animationRect.style.opacity = 0.6;
+            animationImg.src = "../images/mario/frame5.png";
             animationCount++;
             break;
         case 5:
-            animationRect.style.opacity = 0.5;
+            animationImg.src = "../images/mario/frame6.png";
             animationCount++;
             break;
         case 6:
-            animationRect.style.opacity = 0.4;
+            animationImg.src = "../images/mario/frame5.png";
             animationCount++;
             break;
         case 7:
-            animationRect.style.opacity = 0.3;
+            animationImg.src = "../images/mario/frame7.png";
             animationCount++;
             break;
         case 8: 
-            animationRect.style.opacity = 0.2;
+            animationImg.src = "../images/mario/frame8.png";
             animationCount++;
             break;
         case 9:
-            animationRect.style.opacity = 0.1;
-            animationCount = 0;
+            animationImg.src = "../images/mario/frame9.png";
+            animationCount++;
             break;
-    
+        case 10:
+            animationImg.src = "../images/mario/frame10.png";
+            animationCount++;
+            break;
+        case 11:
+            animationRect.setAttribute("id", "");
+            animationCount = 0;
+            animationImg.remove();
+            break;
         default:
             break;
     }
