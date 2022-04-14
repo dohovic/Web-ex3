@@ -92,17 +92,17 @@ header {
 }
 
 .rect-cluster > #selected-rect {
-    background: rgba(0, 160, 0, 1);
+    background: green;
     opacity: 1;
 }
 
 .rect-cluster > #animation-rect {
-    background: rgba(36, 36, 216, 1);
+    background: blue;
     opacity: 1;
 }
 
 .rect-cluster > #animation-rect {
-    background: rgba(36, 36, 216, 1);
+    background: blue;
     opacity: 1;
 }
 
