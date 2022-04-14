@@ -268,10 +268,8 @@ header {
 #layout3-content-container {
     display: flex;
     width: 1000px;
-    /* height: 500px; */
     flex-wrap: wrap;
     flex-direction: row;
-    /* background: #517A8D; */
 }
 
 #small-block {
